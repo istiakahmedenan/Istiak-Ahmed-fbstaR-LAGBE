@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of build/config artifacts (harmless to keep, but keeps crawl budget clean)
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /metadata.json
+
+Sitemap: https://fbstarlagbe.store/sitemap.xml
