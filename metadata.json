@@ -1,0 +1,7 @@
+{
+  "name": "FB Star Lagbe",
+  "description": "FB Star Lagbe থেকে সহজেই Facebook Star Package অর্ডার করুন। পছন্দের Star Package নির্বাচন করে সরাসরি WhatsApp-এর মাধ্যমে অর্ডার করুন।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth">
+  <head>
+    <script>
+      // Defensive guard against extensions or environments attempting to reassign window.fetch when it only has a getter
+      (function() {
+        // Error handler to prevent unhandled TypeError from external scripts/extensions
+        window.addEventListener(
+          'error',
+          function(e) {
+            if (
+              e &&
+              e.message &&
+              typeof e.message === 'string' &&
+              e.message.indexOf('Cannot set property fetch') !== -1
+            ) {
+              if (e.preventDefault) e.preventDefault();
+              if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+              return true;
+            }
+          },
+          true
+        );
+
+        try {
+          var _fetch = window.fetch ? window.fetch.bind(window) : null;
+          var descriptor = {
+            get: function() {
+              return _fetch;
+            },
+            set: function(val) {
+              _fetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          };
+
+          // Configure Window.prototype first
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            try {
+              Object.defineProperty(Window.prototype, 'fetch', descriptor);
+            } catch (e1) {}
+          }
+
+          // Configure window instance
+          try {
+            Object.defineProperty(window, 'fetch', descriptor);
+          } catch (e2) {}
+        } catch (err) {}
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FB Star Lagbe | Facebook Star Service Bangladesh</title>
+    <meta
+      name="description"
+      content="FB Star Lagbe থেকে সহজেই Facebook Star Package অর্ডার করুন। পছন্দের Star Package নির্বাচন করে সরাসরি WhatsApp-এর মাধ্যমে অর্ডার করুন।"
+    />
+    <meta
+      name="keywords"
+      content="FB Star Lagbe, Facebook Star Bangladesh, Facebook Star Service, Facebook Star Buy, Facebook Stars BD, Facebook Star Price, Facebook Star Package, Facebook Star Service Bangladesh"
+    />
+    <meta name="author" content="ইসতিয়াক আহামেদ ইনান" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fbstarlagbe.online/" />
+    <meta property="og:title" content="FB Star Lagbe | Facebook Star Service Bangladesh" />
+    <meta
+      property="og:description"
+      content="FB Star Lagbe থেকে সহজেই Facebook Star Package অর্ডার করুন। পছন্দের Star Package নির্বাচন করে সরাসরি WhatsApp-এর মাধ্যমে অর্ডার করুন।"
+    />
+    <meta property="og:image" content="https://i.ibb.co.com/mVcH7jXZ/pixellab-2026-09-18-T19-04-51-Z.png" />
+    <meta property="og:site_name" content="FB Star Lagbe" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FB Star Lagbe | Facebook Star Service Bangladesh" />
+    <meta
+      name="twitter:description"
+      content="FB Star Lagbe থেকে সহজেই Facebook Star Package অর্ডার করুন। পছন্দের Star Package নির্বাচন করে সরাসরি WhatsApp-এর মাধ্যমে অর্ডার করুন।"
+    />
+    <meta name="twitter:image" content="https://i.ibb.co.com/mVcH7jXZ/pixellab-2026-09-18-T19-04-51-Z.png" />
+
+    <!-- Fonts: Hind Siliguri (Bangla) and Plus Jakarta Sans (English) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "FB Star Lagbe",
+      "image": "https://i.ibb.co.com/mVcH7jXZ/pixellab-2026-09-18-T19-04-51-Z.png",
+      "description": "FB Star Lagbe থেকে সহজেই Facebook Star Package অর্ডার করুন। পছন্দের Star Package নির্বাচন করে সরাসরি WhatsApp-এর মাধ্যমে অর্ডার করুন।",
+      "url": "https://fbstarlagbe.online",
+      "telephone": "+8801902936977",
+      "email": "sherpurcyberagency@gmail.com",
+      "priceRange": "৳400 - ৳1800",
+      "founder": {
+        "@type": "Person",
+        "name": "ইসতিয়াক আহামেদ ইনান"
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "1000 Facebook Star",
+          "price": "400",
+          "priceCurrency": "BDT"
+        },
+        {
+          "@type": "Offer",
+          "name": "3000 Facebook Star",
+          "price": "1000",
+          "priceCurrency": "BDT"
+        },
+        {
+          "@type": "Offer",
+          "name": "5000 Facebook Star",
+          "price": "1200",
+          "priceCurrency": "BDT"
+        },
+        {
+          "@type": "Offer",
+          "name": "10000 Facebook Star",
+          "price": "1500",
+          "priceCurrency": "BDT"
+        },
+        {
+          "@type": "Offer",
+          "name": "20000 Facebook Star",
+          "price": "1800",
+          "priceCurrency": "BDT"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#F4F8FC] text-slate-800 antialiased selection:bg-amber-300 selection:text-blue-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

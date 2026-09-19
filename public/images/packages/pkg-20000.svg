@@ -1,0 +1,151 @@
+
+  <svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#021B3D"/>
+        <stop offset="40%" stop-color="#073B75"/>
+        <stop offset="80%" stop-color="#052752"/>
+        <stop offset="100%" stop-color="#010E24"/>
+      </linearGradient>
+
+      <radialGradient id="centerGlow" cx="50%" cy="45%" r="50%">
+        <stop offset="0%" stop-color="#0084FF" stop-opacity="0.85"/>
+        <stop offset="45%" stop-color="#0056B3" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#001838" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="starGold" cx="35%" cy="35%" r="65%">
+        <stop offset="0%" stop-color="#FFF5A0"/>
+        <stop offset="35%" stop-color="#FFC000"/>
+        <stop offset="80%" stop-color="#E68A00"/>
+        <stop offset="100%" stop-color="#B35F00"/>
+      </radialGradient>
+
+      <linearGradient id="priceGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10B981"/>
+        <stop offset="100%" stop-color="#059669"/>
+      </linearGradient>
+
+      <linearGradient id="brushYellow" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#F59E0B"/>
+        <stop offset="50%" stop-color="#FBBF24"/>
+        <stop offset="100%" stop-color="#F59E0B"/>
+      </linearGradient>
+
+      <linearGradient id="fbBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3B82F6"/>
+        <stop offset="100%" stop-color="#1D4ED8"/>
+      </linearGradient>
+
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="15" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+
+      <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.6"/>
+      </filter>
+    </defs>
+
+    <!-- Background -->
+    <rect width="800" height="800" fill="url(#bgGrad)" />
+    
+    <!-- Background Light Rays / Angled streaks -->
+    <g opacity="0.25">
+      <polygon points="0,0 220,0 480,800 260,800" fill="#38BDF8" />
+      <polygon points="350,0 520,0 780,800 610,800" fill="#00D2FF" />
+      <polygon points="560,0 700,0 800,500 800,250" fill="#60A5FA" />
+      <polygon points="0,350 0,600 350,800 150,800" fill="#2563EB" />
+    </g>
+
+    <!-- Center intense blue radial glow -->
+    <circle cx="400" cy="380" r="380" fill="url(#centerGlow)" />
+
+    <!-- Stage Pedestal Base at Bottom -->
+    <g filter="url(#shadow)">
+      <!-- Outer Stage Ring -->
+      <ellipse cx="400" cy="690" rx="330" ry="85" fill="#042047" stroke="#00D2FF" stroke-width="6" opacity="0.9" />
+      <ellipse cx="400" cy="675" rx="280" ry="70" fill="#062B5E" stroke="#38BDF8" stroke-width="4" />
+      <ellipse cx="400" cy="660" rx="220" ry="50" fill="#0A3B7E" />
+    </g>
+
+    <!-- Glowing stars in background -->
+    <g fill="#FBBF24" opacity="0.9">
+      <!-- Top Right Star -->
+      <polygon points="710,95 722,122 751,124 729,143 736,171 710,155 684,171 691,143 669,124 698,122" />
+      <!-- Middle Right Star -->
+      <polygon points="730,600 738,618 757,620 742,633 747,651 730,641 713,651 718,633 703,620 722,618" />
+      <!-- Bottom Left Star -->
+      <polygon points="90,620 98,638 118,639 103,652 108,671 90,660 72,671 77,652 62,639 82,638" />
+      <!-- Top Left Mini Star -->
+      <polygon points="55,270 61,283 75,284 64,293 68,307 55,299 42,307 46,293 35,284 49,283" />
+    </g>
+
+    <!-- Left Floating 3D Facebook Cube -->
+    <g transform="translate(10, 580) rotate(-14)" filter="url(#shadow)">
+      <rect x="0" y="0" width="130" height="130" rx="28" fill="url(#fbBlue)" stroke="#60A5FA" stroke-width="4"/>
+      <text x="65" y="98" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="96" fill="#FFFFFF" text-anchor="middle">f</text>
+    </g>
+
+    <!-- Right Floating 3D Facebook Cube -->
+    <g transform="translate(640, 310) rotate(12)" filter="url(#shadow)">
+      <rect x="0" y="0" width="140" height="140" rx="30" fill="url(#fbBlue)" stroke="#60A5FA" stroke-width="4"/>
+      <text x="70" y="105" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="102" fill="#FFFFFF" text-anchor="middle">f</text>
+    </g>
+
+    <!-- Top Left Price Pill Badge (৳400 / ৳1000 etc) -->
+    <g filter="url(#shadow)" transform="translate(45, 40)">
+      <rect x="0" y="0" width="290" height="110" rx="55" fill="url(#priceGreen)" stroke="#34D399" stroke-width="6"/>
+      <rect x="8" y="8" width="274" height="46" rx="23" fill="#FFFFFF" opacity="0.25"/>
+      <text x="145" y="77" font-family="'Hind Siliguri', 'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="64" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">৳1800</text>
+    </g>
+
+    <!-- Main Title: 'facebook' small header -->
+    <text x="530" y="215" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="44" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">facebook</text>
+
+    <!-- Big Star on Left of Quantity -->
+    <g transform="translate(80, 240)" filter="url(#shadow)">
+      <!-- Outer glow aura -->
+      <circle cx="120" cy="120" r="130" fill="#FFB800" opacity="0.2" filter="url(#glow)"/>
+      <!-- Star Shape -->
+      <polygon points="120,15 152,80 225,86 170,135 187,206 120,168 53,206 70,135 15,86 88,80" fill="url(#starGold)" stroke="#FFF" stroke-width="4"/>
+      <!-- Star highlight facet -->
+      <polygon points="120,25 145,78 200,83 158,122 120,105" fill="#FFF" opacity="0.45"/>
+    </g>
+
+    <!-- Main 3D Numbers: '1000' / '5000' etc -->
+    <g filter="url(#shadow)">
+      <!-- 3D Offset / Extrusion Shadow -->
+      <text x="545" y="375" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="86" fill="#0A356A" text-anchor="middle">20000</text>
+      <!-- Main Text in Crisp White -->
+      <text x="540" y="365" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="86" fill="#FFFFFF" text-anchor="middle">20000</text>
+    </g>
+
+    <!-- 'STAR' text below number -->
+    <g filter="url(#shadow)">
+      <text x="545" y="475" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="88" fill="#B45309" text-anchor="middle">STAR</text>
+      <text x="540" y="465" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="88" fill="#FACC15" text-anchor="middle">STAR</text>
+    </g>
+
+    <!-- Yellow Brush Stroke: 'FACEBOOK STAR' -->
+    <g transform="translate(120, 520)" filter="url(#shadow)">
+      <!-- Brush stroke background -->
+      <path d="M10,25 Q50,0 280,5 Q510,10 550,22 Q560,45 540,58 Q480,72 270,68 Q30,65 5,45 Z" fill="url(#brushYellow)"/>
+      <text x="280" y="48" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="34" fill="#0F172A" text-anchor="middle" letter-spacing="4">FACEBOOK STAR</text>
+    </g>
+
+    <!-- Bottom Stage Pill Badge: Cart + Star Count -->
+    <g transform="translate(190, 680)" filter="url(#shadow)">
+      <rect x="0" y="0" width="420" height="74" rx="37" fill="#072856" stroke="#00D2FF" stroke-width="4"/>
+      <!-- Cart Icon -->
+      <g transform="translate(45, 20) scale(1.4)" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </g>
+      <line x1="90" y1="18" x2="90" y2="56" stroke="#38BDF8" stroke-width="2" opacity="0.6"/>
+      <!-- Pill Text -->
+      <text x="245" y="48" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="32" fill="#FFFFFF" text-anchor="middle">20000 Star</text>
+    </g>
+  </svg>
+  
