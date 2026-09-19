@@ -2,7 +2,7 @@ import { SiteConfig, StarPackage } from '../types';
 
 export const SITE_CONFIG: SiteConfig = {
   name: 'FB Star Lagbe',
-  domain: 'fbstarlagbe.online',
+  domain: 'fbstarlagbe.store',
   logoUrl: '/logo.png', // local optimized logo, fallbacks to https://i.ibb.co.com/mVcH7jXZ/pixellab-2026-09-18-T19-04-51-Z.png
   ownerName: 'ইসতিয়াক আহামেদ ইনান',
   whatsappNumber: '8801902936977',
